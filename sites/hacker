@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hacker</title>
+    <meta charset="UTF-8">
+    <style>
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes load {
+        30% {
+          translate: 0 -10px;
+        }
+        45% {
+          translate: 0 0;
+        }
+        50% {
+          translate: 0 -4px;
+        }
+        70% {
+          translate: 0 0;
+        }
+      }
+      .spinner {
+        animation: spin 1s linear infinite;
+      }
+      .loading-circle {
+        animation: load 1s linear infinite;
+      }
+      .loading-circle:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .loading-circle:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .loading-circle:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      .spinner {
+        translate: 230px 60px;
+        scale: 1.7;
+      }
+      #loading-label {
+        translate: 200px -170px;
+      }
+      #loading-UI {
+        background-color: #fafafa;
+        border-radius: 20px;
+        box-shadow: 0 2px 10px #00000041;
+        translate: 100% 300px;
+        width: 500px;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading-UI">
+      <svg class="spinner" id="spinner" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="2" x2="12" y2="6"></line>
+        <line x1="12" y1="18" x2="12" y2="22"></line>
+        <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+        <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+        <line x1="2" y1="12" x2="6" y2="12"></line>
+        <line x1="18" y1="12" x2="22" y2="12"></line>
+        <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+        <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+      </svg>
+      <div id="loading-label">
+        <label for="loading-icon">Loading</label>
+        <svg class="loading-icon" id="loading-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="190">
+          <circle class="loading-circle" cx="3" cy="188" r="2"></circle>
+          <circle class="loading-circle" cx="10" cy="188" r="2"></circle>
+          <circle class="loading-circle" cx="17" cy="188" r="2"></circle>
+        </svg>
+      </div>
+    </div>
+    <script>
+    </script>
+  </body>
+</html>
